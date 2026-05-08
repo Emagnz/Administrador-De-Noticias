@@ -36,7 +36,7 @@ $badges = [
   <title>Noticias Institucionales</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="View/css/index.css">
+  <link rel="stylesheet" href="/View/css/index.css">
 </head>
 <body>
 
@@ -50,9 +50,9 @@ $badges = [
         <ul class="navbar-nav ms-auto gap-2">
           <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
           <?php if (in_array(3, $_SESSION['roles'])) : ?>
-            <li class="nav-item"><a class="nav-link" href="parametros.php">Parámetros</a></li>
+            <li class="nav-item"><a class="nav-link" href="/View/parametros.php">Parámetros</a></li>
           <?php endif; ?>
-          <li class="nav-item"><a class="nav-link" href="Controller/procesar_logout.php">Cerrar sesión</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Controller/procesar_logout.php">Cerrar sesión</a></li>
         </ul>
       </div>
     </div>
@@ -66,7 +66,7 @@ $badges = [
         <div class="page-subtitle">Listado de noticias institucionales</div>
       </div>
       <?php if (in_array(1, $_SESSION['roles'])) : ?>
-        <a href="View/crear_noticia.php" class="btn-verde">+ Nueva noticia</a>
+        <a href="/View/crear_noticia.php" class="btn-verde">+ Nueva noticia</a>
       <?php endif; ?>
     </div>
 
@@ -106,7 +106,7 @@ $badges = [
             <div class="card h-100 card-noticia" data-estado="<?php echo $noticia['noticia_estado']; ?>">
 
               <?php if ($noticia['noticia_imagen']) : ?>
-                <img src="uploads/<?php echo htmlspecialchars($noticia['noticia_imagen']); ?>"
+                <img src="/uploads/<?php echo htmlspecialchars($noticia['noticia_imagen']); ?>"
                      class="card-img-top" alt="imagen noticia">
               <?php else : ?>
                 <div class="card-img-placeholder">Sin imagen</div>
@@ -131,7 +131,7 @@ $badges = [
 
               <div class="card-footer d-flex justify-content-between align-items-center">
                 <span><?php echo htmlspecialchars($noticia['nombre_usuario']); ?></span>
-                <a href="View/detalle_noticia.php?id=<?php echo $noticia['noticia_id']; ?>" class="btn-outline-verde">Ver más</a>
+                <a href="/View/detalle_noticia.php?id=<?php echo $noticia['noticia_id']; ?>" class="btn-outline-verde">Ver más</a>
               </div>
 
             </div>
