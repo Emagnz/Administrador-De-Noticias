@@ -1,0 +1,236 @@
+:root {
+  --fondo:         #f0f7f2;
+  --fondo-card:    #ffffff;
+  --verde:         #2d6a4f;
+  --verde-light:   #52a07a;
+  --verde-acento:  #1a4a35;
+  --texto:         #1a2e25;
+  --texto-suave:   #5a7a6a;
+  --borde:         #c0dcc8;
+}
+
+body {
+  background-color: var(--fondo);
+  font-family: 'Source Sans 3', sans-serif;
+  color: var(--texto);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+  font-family: 'Lora', serif;
+}
+
+.navbar {
+  background-color: var(--verde) !important;
+  border-bottom: 2px solid var(--verde-light);
+  padding: 12px 0;
+}
+
+.navbar-brand {
+  color: #fff !important;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.nav-link {
+  color: #d8f3dc !important;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+
+.nav-link:hover { color: #fff !important; }
+.nav-link.active { color: #fff !important; font-weight: 500; }
+
+.btn-volver {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.btn-volver:hover { color: var(--verde); }
+
+.detalle-card {
+  background: var(--fondo-card);
+  border: 0.5px solid var(--borde);
+  border-radius: 12px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.detalle-imagen {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.detalle-header {
+  padding: 1.5rem 2rem 0;
+}
+
+.detalle-titulo {
+  font-family: 'Lora', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--verde);
+  margin: 0.75rem 0 0.5rem;
+}
+
+.detalle-meta {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.detalle-descripcion {
+  padding: 1rem 2rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--texto);
+  border-top: 0.5px solid var(--borde);
+}
+
+.detalle-acciones {
+  padding: 1rem 2rem 1.5rem;
+  border-top: 0.5px solid var(--borde);
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btn-accion {
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.btn-verde {
+  background-color: var(--verde);
+  color: #fff;
+}
+
+.btn-verde:hover {
+  background-color: var(--verde-acento);
+  color: #fff;
+}
+
+.btn-peligro {
+  background-color: #c0392b;
+  color: #fff;
+}
+
+.btn-peligro:hover {
+  background-color: #a93226;
+  color: #fff;
+}
+
+.btn-advertencia {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn-advertencia:hover {
+  background-color: #ca6f1e;
+  color: #fff;
+}
+
+.texto-info {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  margin: 0;
+}
+
+.badge-estado {
+  font-size: 0.7rem;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+.detalle-historial {
+  background: var(--fondo-card);
+  border: 0.5px solid var(--borde);
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.historial-titulo {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--verde);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.historial-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.historial-item {
+  display: flex;
+  gap: 1rem;
+  padding: 10px 0;
+  border-bottom: 0.5px solid var(--borde);
+  align-items: flex-start;
+}
+
+.historial-item:last-child {
+  border-bottom: none;
+}
+
+.historial-fecha {
+  font-size: 0.75rem;
+  color: var(--texto-suave);
+  min-width: 110px;
+  padding-top: 2px;
+}
+
+.historial-contenido {
+  font-size: 0.85rem;
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+.historial-usuario {
+  font-weight: 500;
+  color: var(--verde);
+}
+
+.historial-estado {
+  font-weight: 500;
+  color: var(--texto);
+  background: var(--crema-dark);
+  padding: 1px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.historial-observacion {
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.badge-borrador   { background: #e8e8e8; color: #555; }
+.badge-validacion { background: #d0e8f0; color: #1a5a8a; }
+.badge-correccion { background: #f8ddd0; color: #a03010; }
+.badge-publicada  { background: #d4e8d0; color: #2d6a4f; }
+.badge-expirada   { background: #e8e0d8; color: #6a5e52; }
+.badge-anulada    { background: #f0d0d0; color: #8a2020; }
